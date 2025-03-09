@@ -15,10 +15,14 @@ def home():
 
     file = request.files['file']
 
+    # Get the extra inputs (date and integer)
+    date = request.form.get("date")
+    hour = request.form.get("value")
+
     if not file.filename.endswith('.csv'):
         return jsonify({"error": "Invalid file format. Please upload a CSV file"})
 
-    res = prediction(file)
+    res = prediction(file, date, hour)
     return jsonify(res)
 
 

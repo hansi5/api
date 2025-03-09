@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 
 
-def prediction(file):
+def prediction(file, date, hour):
     # Load the dataset
     df = pd.read_csv(file)
 
@@ -59,7 +59,7 @@ def prediction(file):
     #     print(f"{key}: Train: {value['train_r_squared']:.4f}, Test: {value['test_r_squared']:.4f}")
 
     # Example prediction
-    example_prediction = predict_energy_consumption("2024-03-10", 14)
+    example_prediction = predict_energy_consumption(date, hour)
     # print("Example Prediction for 2024-03-10 at 14:00:")
     # print(example_prediction)
     return example_prediction
