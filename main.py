@@ -3,7 +3,7 @@ import requests
 from module import prediction
 import time
 
-app = Flask(__name__)
+app = Flask("__name__")
 app.config['SECRET_KEY'] = '8BYkEfB7C0sKR6b'
 
 
