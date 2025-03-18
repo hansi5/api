@@ -41,8 +41,8 @@ def generate_ai():
     res = generate(file)
     return jsonify(res)
 
-
-# url = "http://127.0.0.1:5000/predict"
+#
+# url = "http://127.0.0.1:5000/generate"
 #
 # with open("company_small.csv", "rb") as file:
 #     response = requests.post(url, files={"file": file})

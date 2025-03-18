@@ -52,3 +52,4 @@ def generate(file):
 
     for key, value in recommendations.items():
         print(f"{key}: {value}")
+    return recommendations
